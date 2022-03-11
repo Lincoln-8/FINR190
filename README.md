@@ -13,7 +13,7 @@ linha 2161: NEWSE5->(DbSkip()) ao invés dele posicionar no próximo registro el
 Então abri um chamado com a TOTVS sugerindo que talvez esse erro seja uma má performance entre o banco de dados Oracle e a Classe
 FWTemporaryTable, provavelmente algo relacionado a LIB, como paliativo criei um relatório novo de relação de baixas(FINR190C.PRW)
 onde mantenho as mesmas regras de negócio do relatório padrão, adicionando apenas 7 linhas a mais no código, substituindo apenas a classe 
-FWTemporaryTable pela função MPSysOpenQuery utilizando o mesmo ALIAS NEWSE5, após isso os usuários passaram a conseguir gerar o relatório..
+FWTemporaryTable pela função MPSysOpenQuery utilizando o mesmo ALIAS NEWSE5, após isso os usuários passaram a conseguir gerar o relatório.
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------------------
