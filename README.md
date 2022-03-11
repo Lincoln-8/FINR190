@@ -2,12 +2,13 @@
 Relatório relação de baixas(FINR190) com resolução paliativa.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
-Descrição:
+## Descrição:
 
 Recentemente identifiquei uma ocorrência no relatório padrão do protheus de relação de baixas(FINR190.PRX - Data: 12/01/2022), em que, 
 em um determinado momento o relatório padrão entra em laço de repetição infinito(While), ocasionando travamento para os usuários do sistema
 e consumindo os recursos do servidor de CPU, memória etc. Após debugar o fonte padrão identifiquei que no momento da execução da 
 linha 2161: NEWSE5->(DbSkip()) ao invés dele posicionar no próximo registro ele volta pra o anterior. 
+
 
 Então abri um chamado com a TOTVS sugerindo que talvez esse erro seja uma má performance entre o banco de dados Oracle e a Classe
 FWTemporaryTable, provavelmente algo relacionado a LIB, como paliativo criei um relatório novo de relação de baixas(FINR190C.PRW)
@@ -16,14 +17,14 @@ FWTemporaryTable pela função MPSysOpenQuery utilizando o mesmo ALIAS NEWSE5, a
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------------------
-Chamado TOTVS:
+## Chamado TOTVS:
 
 Solicitação #13723076
 FINR190 - Travamento, em looping - SE5RECNO 127047252, volta 127043769 dbselectarea(NEWSE5")
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------------------
-Descrições dos arquivos:
+## Descrições dos arquivos:
 
 Includes padrões necessárias: 
 dbstruct.ch e finr190.ch
