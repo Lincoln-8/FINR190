@@ -14,8 +14,9 @@ FINR190 - Travamento, em looping - SE5RECNO 127047252, volta 127043769 dbselecta
 
 ## Descrições dos arquivos:  
 
-Includes padrões necessárias: **dbstruct.ch e finr190.ch**.  
+Includes padrões necessárias: **finr190.ch**.  
 Perguntas necessárias: **SX1_FIN190C.rar**.   
+Relatório padrão com erro má performance **FINR190.PRX**
 Relatório customizado com uma correção paliativa: **FINR190C.PRW**.  
 
 OBS: A única diferença entre os fontes **FINR190.PRX** e o **FINR190C.PRW** é que no fonte customizado existe o seguinte código a mais de forma que a alteração realizada no relatório é mínima garantindo toda regra de negócio do relatório padrão, segue:  
