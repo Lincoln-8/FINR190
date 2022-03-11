@@ -1337,9 +1337,9 @@ Static Function FA190ImpR4(aRet As Array, nOrdem As Numeric, aTotais As Array, o
         SM0->(DbSeek(cEmpAnt + If(Empty(cFilDe), "", cFilDe), .T.))
     EndIf
 
-    NEWSE5->(dbCloseArea())
-    __cQry := " SELECT * FROM "+cTable
-    MPSysOpenQuery(__cQry, "NEWSE5", U_F190FieldsC())
+    NEWSE5->(dbCloseArea())                            // destroi o alias NEWSE5 relacionado a classe FwTemporaryTable.
+    __cQry := " SELECT * FROM "+cTable                 // cria query.
+    MPSysOpenQuery(__cQry, "NEWSE5", U_F190FieldsC())  // recria o alias NEWSE5 dessa vez com a função MPSysOpenQuery.
 
     DbSelectArea("NEWSE5")
     DbGoTop()
